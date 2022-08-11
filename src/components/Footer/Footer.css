@@ -1,0 +1,54 @@
+.footer{
+    height: 365px;
+    background: rgba(61, 86, 117, 0.4);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+.block-block{
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.footer-block3 div a{
+    margin: 0 2px;
+    text-decoration: none;
+}
+.footer p{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17.58px;
+    color: rgba(49, 102, 175, 1)
+    ;
+    margin: 10px 0;
+
+}
+.footer-block4 input {
+width: 280px;
+height: 36px;
+border: none;
+border-radius: 34px;
+padding-left: 3%;
+margin: 2% 0;
+}
+
+.footer-block4 button{
+    width: 187px;
+    height: 44px;
+    border: none;
+    border-radius: 34px;
+    background: rgba(49, 102, 175, 1);
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.09px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
