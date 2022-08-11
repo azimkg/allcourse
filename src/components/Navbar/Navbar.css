@@ -53,6 +53,12 @@
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 28px;
   padding: 7px 21px;
+  border: none;
+  cursor: pointer;
+}
+.navbar__login {
+  color: #fff;
+  margin-left: 10px;
 }
 /* burger menu */
 .navbar_burger {

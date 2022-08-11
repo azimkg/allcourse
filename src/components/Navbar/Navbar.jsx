@@ -1,12 +1,16 @@
 import React from "react";
+import { useContext } from "react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import { authContext } from "../../contexts/authContext";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { user, logout } = useContext(authContext);
   const location = useLocation();
+  const navigate = useNavigate();
   const NAVBAR_ROUTE = [
     { title: "Главная", link: "/", id: 1 },
     { title: "Все курсы", link: "/courses", id: 2 },
@@ -17,6 +21,9 @@ const Navbar = () => {
   }
   function closeBurger() {
     setOpen(false);
+  }
+  function out() {
+    logout();
   }
   return (
     <div className="main_navbar">
@@ -40,9 +47,18 @@ const Navbar = () => {
           ))}
         </div>
         <div className="main_navbar-three">
-          <Link className="navbar_auth" to="/auth">
-            Войти
-          </Link>
+          {user ? (
+            <>
+              <button className="navbar_auth" onClick={out}>
+                Выйти
+              </button>
+              <span className="navbar__login">{user}</span>
+            </>
+          ) : (
+            <Link className="navbar_auth" to="/auth">
+              Войти
+            </Link>
+          )}
         </div>
 
         <div className="navbar_burger">

@@ -16,7 +16,7 @@ const Routing = () => {
     <BrowserRouter>
       <Routes>
         {ROUTE_PATH.map((item) => (
-          <Route path={item.link} element={item.element} />
+          <Route path={item.link} key={item.id} element={item.element} />
         ))}
       </Routes>
     </BrowserRouter>
