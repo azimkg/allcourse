@@ -1,6 +1,8 @@
 import React from 'react';
 import "../Footer/Footer.css"
 import 'boxicons'
+import logo from "../../assets/logo.svg";
+
 
 
 
@@ -9,7 +11,9 @@ import 'boxicons'
 const Footer = () => {
     return (
         <div className='footer container '  >
-            <div className='footer-block block-block' >logo</div>
+                        <div className='footer-block' > <img src={logo} alt="" /> </div>
+
+<div className='footer-blocks' >
             <div className='footer-block1 block-block' >  
                 <p>Custom Design</p>
                 <p>All Products</p>
@@ -45,6 +49,7 @@ const Footer = () => {
                 <p>Get exclusive offers and tips.</p>
                 <input type="text" placeholder='name?' name="" id="" />
                 <button>Join instantly</button>
+            </div>
             </div>
         </div>
     );

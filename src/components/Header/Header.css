@@ -56,10 +56,11 @@ overflow-x: hidden;
 }
 .header-frame{
     width: 100%;
-    height: 120px;
+    height: 1005;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .header-frame img{
     height: 80px;
@@ -68,10 +69,12 @@ overflow-x: hidden;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     background: rgba(238, 238, 238, 1);
     padding-top: 5% ;
     padding-bottom: 5%;
+    align-items: center;
+
 }
 
 
@@ -85,6 +88,7 @@ overflow-x: hidden;
     /* margin: 20px 0 ; */
     background: white;
     border-radius: 30px;
+    margin: 5px;
 }
 .header-block div p{
     width: 273px;
@@ -105,7 +109,7 @@ overflow-x: hidden;
     background:rgba(49, 102, 175, 1) ;
 }
 .header-about img{
-    width: 495px;
+    width: 40%;
 }
 .header-about p{
     width: 435px;
@@ -147,4 +151,64 @@ overflow-x: hidden;
     background: white;
     color:rgba(49, 102, 175, 1) ;
     width: 197px;
+}
+
+@media(max-width:800px){
+    .left-top-header h1{
+        margin-top: 50px;
+    }
+    .left-top-header p {
+        width: 420px;
+    }
+    .right-top-header{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        margin: 2% 0;
+    }
+    .top-header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-about{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header-about p{
+        margin-left: 0;
+        text-align: center;
+    }
+}
+@media(max-width:420px){
+.header-block div{
+    width: 320px;
+    margin: 0;
+}
+.header-block div img{
+    width: 320px;
+}
+.left-top-header button {
+   margin: 0 12%;
+}
+.left-top-header p {
+    width: 320px;
+    font-size: 14px;
+    text-align: center;
+}
+.left-top-header h1 {
+    width: 320px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.right-top-header img {
+    width: 320px;
+}
+.header-block div {
+    margin-top: 2%;
+}
+
 }
