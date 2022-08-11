@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import OneCourse from "./components/OneCourse/OneCourse";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import AuthorizationPage from "./pages/AuthorizationPage/AuthorizationPage";
 import CoursesPage from "./pages/Courses/CoursesPage";
@@ -11,6 +12,7 @@ const Routing = () => {
     { element: <CoursesPage />, link: "/courses", id: 2 },
     { element: <AuthorizationPage />, link: "/auth", id: 3 },
     { element: <AboutPage />, link: "/about", id: 4 },
+    { element: <OneCourse />, link: "/courses/:id", id: 5 },
   ];
   return (
     <BrowserRouter>

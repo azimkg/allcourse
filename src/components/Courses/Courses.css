@@ -1,0 +1,32 @@
+.courser_main_page {
+  height: 80vh;
+}
+.courses_title {
+  text-align: center;
+  margin-top: 40px;
+  color: rgb(65, 64, 64);
+}
+.courses_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+  margin: 100px auto;
+}
+.courses_name_place {
+  width: 400px;
+  height: 50px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(59, 57, 57);
+}
+.courses_name_place:hover {
+  background-color: #3166af;
+  color: #fff !important;
+}

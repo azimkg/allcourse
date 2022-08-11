@@ -80,6 +80,7 @@ const Navbar = () => {
                 {NAVBAR_ROUTE.map((item) => (
                   <Link
                     to={item.link}
+                    key={item.id}
                     className={
                       location.pathname === item.link
                         ? "burger_items-active"
