@@ -8,14 +8,22 @@ export const courseContext = React.createContext();
 const INIT_STATE = {
   courses: [],
   lesson: null,
+  countLesson: 0,
 };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case GET_ALL_COURSES:
-      return { ...state, courses: action.payload };
+      return {
+        ...state,
+        courses: action.payload.results,
+        // countLesson: action.payload.count,
+      };
     case GET_ONE_COURSES:
-      return { ...state, lesson: action.payload };
+      return {
+        ...state,
+        lesson: action.payload,
+      };
     default:
       return state;
   }
@@ -24,15 +32,18 @@ const reducer = (state = INIT_STATE, action) => {
 const CourseContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   async function getAllCourses() {
-    let { data } = await axios.get(`${AUTH_API}/course/api/v1/`);
+    let res = await axios.get(
+      `${AUTH_API}/course/api/v1/` + window.location.search
+    );
+    console.log(res);
     dispatch({
       type: GET_ALL_COURSES,
-      payload: data.results,
+      payload: res.data,
     });
   }
   async function getOneCourses(id) {
     let { data } = await axios.get(`${AUTH_API}/course/api/v1/${id}/`);
-    console.log(data);
+
     dispatch({
       type: GET_ONE_COURSES,
       payload: data,
@@ -43,6 +54,7 @@ const CourseContextProvider = ({ children }) => {
       value={{
         courses: state.courses,
         lesson: state.lesson,
+        countLesson: state.countLesson,
         getAllCourses,
         getOneCourses,
       }}

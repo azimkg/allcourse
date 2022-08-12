@@ -6,9 +6,11 @@ import SignIn from "../../components/SignIn/SignIn";
 const AuthorizationPage = () => {
   return (
     <>
-      <Navbar />
-      <SignIn />
-      <Footer />
+      <div style={{ background: "#EEEEEE" }}>
+        <Navbar />
+        <SignIn />
+        <Footer />
+      </div>
     </>
   );
 };

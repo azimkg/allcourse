@@ -5,6 +5,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import AuthorizationPage from "./pages/AuthorizationPage/AuthorizationPage";
 import CoursesPage from "./pages/Courses/CoursesPage";
 import HomePage from "./pages/HomePages/HomePage";
+import NotFoundPAge from "./pages/NotFounPage/NotFoundPAge";
 
 const Routing = () => {
   const ROUTE_PATH = [
@@ -13,6 +14,7 @@ const Routing = () => {
     { element: <AuthorizationPage />, link: "/auth", id: 3 },
     { element: <AboutPage />, link: "/about", id: 4 },
     { element: <OneCourse />, link: "/courses/:id", id: 5 },
+    { element: <NotFoundPAge />, link: "*", id: 6 },
   ];
   return (
     <BrowserRouter>

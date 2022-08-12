@@ -90,9 +90,18 @@ const Navbar = () => {
                     {item.title}
                   </Link>
                 ))}
-                <Link className="burger_items-auth " to="/auth">
-                  Войти
-                </Link>
+                {user ? (
+                  <>
+                    <p className="burger_items-auth " onClick={out}>
+                      Выйти
+                    </p>
+                    <span className="burger_items-auth ">{user}</span>
+                  </>
+                ) : (
+                  <Link className="burger_items-auth " to="/auth">
+                    Войти
+                  </Link>
+                )}
               </div>
             </div>
           ) : null}

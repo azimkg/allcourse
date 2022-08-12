@@ -8,6 +8,16 @@
 .container {
   max-width: 100%;
   width: 100%;
-  margin: 0 ;
+  margin: 0;
   padding: 0 10%;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 5%;
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    padding: 0 1%;
+  }
 }
